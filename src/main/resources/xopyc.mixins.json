@@ -1,0 +1,25 @@
+{
+  "package": "ru.xopyc.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "entity.ClientPlayerEntityMixin",
+    "input.CameraMixin",
+    "input.InputMixin",
+    "input.KeyboardInputMixin",
+    "input.KeyBoardMixin",
+    "render.GameRendererMixin",
+    "render.HeldItemRendererMixin",
+    "render.InGameHudMixin",
+    "render.LivingEntityRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "entity.EntityMixin",
+    "entity.FireworkRocketEntityMixin",
+    "entity.LivingEntityMixin",
+    "entity.PlayerEntityMixin",
+    "network.ClientConnectionMixin"
+  ]
+}

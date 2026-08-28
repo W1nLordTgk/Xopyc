@@ -1,0 +1,19 @@
+{
+	"schemaVersion": 1,
+	"id": "xopyc",
+	"version": "${version}",
+	"name": "Xopyc",
+
+	"environment": "client",
+	"accessWidener": "xopyc.accesswidener",
+
+	"entrypoints": {
+		"client": [
+			"ru.xopyc.Xopyc"
+		]
+	},
+
+	"mixins": [
+		"xopyc.mixins.json"
+	]
+}
