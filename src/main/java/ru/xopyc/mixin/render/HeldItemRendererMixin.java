@@ -38,8 +38,8 @@ public class HeldItemRendererMixin implements IMinecraft {
 
             ViewModel viewModel = ViewModel.getInstance();
             if (viewModel.isEnabled()) {
+                // viewModel.applyHandScale(matrices, arm);
                 viewModel.applyHandPosition(matrices, arm);
-                viewModel.applyHandScale(matrices, arm);
             }
 
             if (item.isOf(Items.CROSSBOW)) {
