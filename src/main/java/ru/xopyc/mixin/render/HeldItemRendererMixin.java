@@ -35,6 +35,13 @@ public class HeldItemRendererMixin implements IMinecraft {
             boolean bl = hand == Hand.MAIN_HAND;
             Arm arm = bl ? player.getMainArm() : player.getMainArm().getOpposite();
             matrices.push();
+
+            ViewModel viewModel = ViewModel.getInstance();
+            if (viewModel.isEnabled()) {
+                viewModel.applyHandPosition(matrices, arm);
+                viewModel.applyHandScale(matrices, arm);
+            }
+
             if (item.isOf(Items.CROSSBOW)) {
                 boolean bl2 = CrossbowItem.isCharged(item);
                 boolean bl3 = arm == Arm.RIGHT;
@@ -163,14 +170,6 @@ public class HeldItemRendererMixin implements IMinecraft {
                         this.applySwingOffset(matrices, arm, swingProgress);
                     }
                 }
-
-
-                ViewModel viewModel = ViewModel.getInstance();
-                if (viewModel.isEnabled()) {
-                    viewModel.applyHandPosition(matrices, arm);
-                    viewModel.applyHandScale(matrices, arm);
-                }
-
 
                 this.renderItem(player, item, bl2 ? ModelTransformationMode.FIRST_PERSON_RIGHT_HAND : ModelTransformationMode.FIRST_PERSON_LEFT_HAND, !bl2, matrices, vertexConsumers, light);
             }
