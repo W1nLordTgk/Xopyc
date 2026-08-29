@@ -8,7 +8,7 @@ import ru.xopyc.module.impl.visuals.*;
 
 import java.util.*;
 
-public final class gitModuleManager implements Listener {
+public final class ModuleManager implements Listener {
     @Getter private static final ModuleManager instance = new ModuleManager();
     @Getter private final Set<Module> modules = new HashSet<>();
 
